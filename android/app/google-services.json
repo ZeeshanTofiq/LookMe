@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "777397762117",
+    "project_id": "lookme-295f9",
+    "storage_bucket": "lookme-295f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777397762117:android:50d5deea5ee9ef425d0b2c",
+        "android_client_info": {
+          "package_name": "com.andriod.look_me"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777397762117-rclncjjbhb7nrsjh7jb5ni9bnc3u236p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfYu_ycVXEfqGMoarykDFLPaOSJCuqaQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777397762117-rclncjjbhb7nrsjh7jb5ni9bnc3u236p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
