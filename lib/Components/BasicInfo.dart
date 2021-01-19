@@ -49,7 +49,7 @@ class _BasicInfoState extends State<BasicInfo> {
             // print('In Waiting');
             return LoadingWidget();
           }
-          print('=== 1data ===: ${snapshot.data.data}');
+          // print('=== 1data ===: ${snapshot.data.data}');
 
           if (snapshot.hasData) {
             // setGender(snapshot.data.data["Gender"]);
@@ -118,7 +118,7 @@ class _BasicInfoState extends State<BasicInfo> {
                   widget.isCurrentUser ?
                   GenderWidget(initialVal: selectedGender,onChange:(String val){
                      selectedGender = val;
-                     print('i am changed');
+                     // print('i am changed');
                      print(selectedGender);
                   }):TextFormField(
                     initialValue: selectedGender,
@@ -132,7 +132,7 @@ class _BasicInfoState extends State<BasicInfo> {
                     btnText: 'Save',
                     colour: primaryColor,
                     onPress: () async {
-                      print(selectedGender);
+                      // print(selectedGender);
                       try {
                         await widget.profileRef.updateData({
                           'email': email,

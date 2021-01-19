@@ -4,7 +4,9 @@ import 'package:look_me/Components/MaterialMyButton.dart';
 import 'package:look_me/Screens/Login.dart';
 import 'package:look_me/Utilities/Constants.dart';
 import 'package:look_me/Screens/SignUp.dart';
-
+import 'package:look_me/Repo/AuthRepo.dart';
+import 'package:look_me/Components/LoadingWidget.dart';
+import 'package:look_me/Screens/Home.dart';
 
 class Welcome extends StatefulWidget {
   static const String id = 'welcome_screen';
@@ -13,11 +15,36 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
+  dynamic isloggedIn;
+  @override
+  void initState(){
+    super.initState();
+    getCurrentUser();
+  }
+  Future<void> getCurrentUser()async {
+    var user;
+    try{
+      user = await AuthRepo().getCurrent();
+    }catch(e){
+      print(e);
+    }
+    if (user != null){
+      setState(() {
+        this.isloggedIn = true;
+      });
+    }else{
+      setState(() {
+        this.isloggedIn = false;
+      });
+    }
+    print(this.isloggedIn);
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return this.isloggedIn !=null ? Scaffold(
         resizeToAvoidBottomPadding: false,
-        body: Column(
+        body: this.isloggedIn == true ? Home():Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Expanded(
@@ -92,6 +119,6 @@ class _WelcomeState extends State<Welcome> {
           child: Container(),
         ),
       ],
-    ));
+    )):LoadingWidget();
   }
 }

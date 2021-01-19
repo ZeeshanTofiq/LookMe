@@ -24,6 +24,7 @@ class _MyAppState extends State<MyApp> {
           Login.id:(context)=>Login(),
           SignUp.id:(context)=>SignUp(),
           Home.id:(context)=>Home(),
+          // LoadingWidget.id:(context)=>LoadingWidget(),
         },
       );
     }
