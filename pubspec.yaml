@@ -40,6 +40,8 @@ dependencies:
   firebase_auth: ^0.14.0+5
   cloud_firestore: ^0.12.9+5
   flutter_plugin_pdf_viewer: ^1.0.7
+  splashscreen: ^1.3.5
+  minimize_app: ^0.1.1
 
 dev_dependencies:
   flutter_test:

@@ -97,7 +97,7 @@ class _HomeState extends State<Home> {
                 try{
                   await FirebaseAuth.instance.signOut();
                   Navigator.pushNamedAndRemoveUntil(context, Welcome.id,(route) => false);
-
+                  //   Navigator.pushNamed(context, Welcome.id);
                 }catch(e){
                   print(e);
                 }
